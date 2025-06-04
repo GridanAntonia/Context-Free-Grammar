@@ -55,6 +55,9 @@ def tester(target_string):
     ok = 0
     cnt_b = 0
     for char in target_string:
+        if char not in terminals:
+            return False
+    for char in target_string:
         if char == 'a' and ok == 0:
             cnt_a += 1
         else:
@@ -97,7 +100,6 @@ if __name__ == '__main__':
     print("Target string: ")
     target_string = input()
     print(tester(target_string))
-
 
 
 
